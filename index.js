@@ -1,3 +1,6 @@
+//ACCESO A EL ARCHIVO .ENV
+require("dotenv").config();
+
 //LLAMADO AL APLICATIVO DEL SERVIDOR
 const app = require("./src/app")
 

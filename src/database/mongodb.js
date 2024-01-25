@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 //CONEXION A MONGODB
-mongoose.connect('mongodb://localhost:27017/INSTBVM')
+const URI = process.env.MONGOURI;
+mongoose.connect(URI)
   .then(() => console.log('¡Mongodb - Conectado!'))
   .catch(err => console.error("Mongodb - Error al conectarse: ",err));
 

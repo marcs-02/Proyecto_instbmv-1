@@ -5,8 +5,8 @@ module.exports = (app) => {
         res.render("index.hbs")
     })
 
-    app.get('/login', function (req, res) {
-        res.render("login.hbs")
+    app.get('/about', function (req, res) {
+        res.render("about.hbs")
     })
 
 }
