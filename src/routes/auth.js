@@ -1,11 +1,11 @@
+const ctl_auth = require("../controllers/ctl_auth");
+
 module.exports = (app) => {
 
-    app.get('/login', function (req, res) {
-        res.render("auth/login.hbs")
-    })
+    app.get('/login', ctl_auth.login);
 
-    app.get('/registro', function (req, res) {
-        res.render("auth/registro.hbs")
-    })
+    app.get('/registro', ctl_auth.registro);
+
+    app.post("/registro", ctl_auth.guardar);
 
 }

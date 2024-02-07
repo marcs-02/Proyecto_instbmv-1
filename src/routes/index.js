@@ -1,13 +1,11 @@
 
+const ctl_index = require("../controllers/ctl_index");
+
 module.exports = (app) => {
     
-    app.get('/', function (req, res) {
-        res.render("index.hbs")
-    })
+    app.get('/',ctl_index.inicio);
 
-    app.get('/about', function (req, res) {
-        res.render("about.hbs")
-    })
+    app.get('/about', ctl_index.about);
 
 }
 
