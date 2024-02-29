@@ -12,11 +12,11 @@ ctrl.principal = async (req,res)=>{
 
     var notas = await Notas.find({"user":user._id});
 
-    res.render("principal.hbs", {session: req.session, user, notas})
+    res.render("principal.hbs", {session: req.session, user, notas, ubicacion:req.path})
 };
 
 ctrl.about = (req,res)=>{
-    res.render("about.hbs", {session: req.session})
+    res.render("about.hbs", {session: req.session, ubicacion:req.path})
 };
 
 module.exports = ctrl;

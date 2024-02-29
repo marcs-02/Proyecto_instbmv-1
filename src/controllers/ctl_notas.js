@@ -5,6 +5,17 @@ ctrl.add = (req,res) =>{
     res.render("notas/add.hbs", {session: req.session});
 };
 
+ctrl.edit = async (req,res) => {
+
+    const codigo = req.params.codigo
+
+    const nota = await Nota.findOne({"_id":codigo})
+
+    console.log(nota)
+
+    res.render("notas/edit.hbs", {session: req.session});
+}
+
 
 ctrl.guardar = async (req,res) =>{
     
