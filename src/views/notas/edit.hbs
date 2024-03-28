@@ -7,23 +7,28 @@
                 </h1>
             </div>
             <div class="card-body">
-                <form action="/notas/add" method="POST">
+                <form method="POST">
                     <div class="mb-3">
                         <label for="title">Titulo:</label>
                         <input type="text" class="form-control" name="title" placeholder="Titulo"
-                            autofocus />
+                            value="{{nota.title}}" autofocus />
                     </div>
                     <div class="mb-3">
                         <label for="description">Descripción:</label>
-                        <textarea class="form-control" name="description" placeholder="Descripción de la nota"></textarea>
+                        <textarea class="form-control" name="description" placeholder="Descripción de la nota">{{nota.description}}</textarea>
 
                     </div>
                     <button type="submit" class="btn btn-success btn-block">
-                        Guardar Nota
+                        Editar Nota
                     </button>
                 </form>
+
+                    <button class="btn btn-danger btn-block btn-eliminar" data-id="{{nota._id}}">Eliminar Nota</button>
+
             </div>
 
         </div>
     </div>
 </div>
+
+<script src="/js/del_nota.js"></script>

@@ -25,6 +25,7 @@ ctrl.ingresar = async (req,res) =>{
         res.render("auth/login.hbs", {error_msg: errores})
     }else{
         req.session._id = existe._id;
+        req.session.rol = existe.rol
         res.redirect("/principal")
     }
 
@@ -59,6 +60,7 @@ ctrl.guardar = async (req,res) =>{
             name,
             email,
             password,
+            rol: "Cliente"
         });
         usuario.password = await usuario.encryptPassword(password);
         await usuario.save();

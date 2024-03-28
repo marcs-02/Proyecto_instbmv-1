@@ -1,0 +1,22 @@
+<!-- DATATABLES -->
+<table id="myTable" class="table-responsive display table table-hover">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Nombre</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <th scope="row">{{email}}</th>
+            <td>{{name}}</td>
+            <td><a class="btn btn-primary" target="_blank" href="/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+            <button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<script src="/js/table_users.js"></script>
+
