@@ -11,4 +11,13 @@ helpers.obt_ruta = (ubicacion,texto) =>{
 
 }
 
+helpers.val_rol = (rol) => {
+    
+    if(rol === "Administrador"){
+        return true
+    }
+    return false
+}
+
+
 module.exports = helpers;
