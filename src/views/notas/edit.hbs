@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-4 mx-auto">
+        <div class="card mt-5 rounded">
+            <div class="card-header text-center">
+                <h1 class="h4">
+                    Editar nota
+                </h1>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="title">Titulo:</label>
+                        <input type="text" class="form-control" name="title" placeholder="Titulo"
+                            value="{{nota.title}}" autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <label for="description">Descripción:</label>
+                        <textarea class="form-control" name="description" placeholder="Descripción de la nota">{{nota.description}}</textarea>
+
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">
+                        Editar Nota
+                    </button>
+                </form>
+
+                    <button class="btn btn-danger btn-block btn-eliminar" data-id="{{nota._id}}">Eliminar Nota</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/del_nota.js"></script>

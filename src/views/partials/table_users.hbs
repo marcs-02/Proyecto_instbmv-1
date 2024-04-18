@@ -1,0 +1,26 @@
+<!-- DATATABLES -->
+<table id="myTable" class="table-responsive display table table-hover">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Nombre</th>
+            {{#if (val_rol session.rol) }}
+            <th>Opciones</th>
+            {{/if}}
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <th scope="row">{{email}}</th>
+            <td>{{name}}</td>
+            {{#if (val_rol ../session.rol) }}
+            <td><a class="btn btn-primary" target="_blank" href="/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+            <button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+            {{/if}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<script src="/js/table_users.js"></script>
+

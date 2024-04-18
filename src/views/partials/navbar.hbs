@@ -5,18 +5,17 @@
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/about">ABOUT</a>
-        
+        <a class="nav-link active" aria-current="page" href="/about">About</a>
       
         {{#if session._id}}
-          <a class="nav-link active" href="/principal">ASISTENCIAS</a>
-          <a class="nav-link active" href="/asistencia">TABLA</a>
-          <a class="nav-link active" href="/salir">SALIR</a>
+          <a class="nav-link" href="/principal">Principal</a>
+          <a class="nav-link" href="/salir">Salir</a>
         {{else}}
-          <a class="nav-link active" href="/login">LOGIN</a>
-          <a class="nav-link active" href="/registro">REGISTRO</a>
+          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/registro">Registro</a>
         {{/if}}
 
       </div>

@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 //CONEXION A MONGODB
@@ -7,4 +8,15 @@ mongoose.connect(URI)
   .catch(err => console.error("Mongodb - Error al conectarse: ",err));
 
 //EXPORTANDO MODULO MONGOOSE
+
+const mongoose = require('mongoose');
+
+//CONEXION A MONGODB
+const URI = process.env.MONGOURICLOUD;
+mongoose.connect(URI)
+  .then(() => console.log('¡Mongodb - Conectado!'))
+  .catch(err => console.error("Mongodb - Error al conectarse: ",err));
+
+//EXPORTANDO MODULO MONGOOSE
+
 module.exports = mongoose;

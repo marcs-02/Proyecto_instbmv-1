@@ -10,33 +10,31 @@
 
 <div class="row mb-2">
     <div class="col text-end">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            GUARDAR ASISTENCIA
-        </button>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-4" id="exampleModalLabel">BIENVENIDO</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="h4">Nombre :</p>
-                        <p>{{user.name}}</p>
-                        <p class="h4">Correo Electronico :</p>
-                        <p>{{user.email}}</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <form action="/asistencia" method="POST">
+        <a href="/notas/add" class="btn btn-success">Agregar Nota</a>
 
-                            <button type="submit" class="btn btn-success">Guardar Asistencia</button>
-                        
-                        </form>
-                    </div>
-                </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    {{#each notas}}
+    <div class="mb-2 col col-12 col-lg-4 col-md-4 col-sm-12">
+
+        <div class="card">
+            
+            <div class="card-header">
+                <p><b>{{title}}</b></p>
+            </div>
+
+            <div class="card-body">
+
+                <p>{{description}}</p>
+
             </div>
         </div>
     </div>
+    {{/each}}
+
 </div>
