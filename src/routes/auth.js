@@ -11,4 +11,6 @@ module.exports = (app) => {
     app.get('/registro', notAuth, ctl_auth.registro);
     app.post("/registro",notAuth, ctl_auth.guardar);
 
+
+
 }

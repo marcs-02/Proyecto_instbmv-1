@@ -49,7 +49,7 @@ require("./database/mongodb")
 //DEFINICION DE RUTAS
 require("./routes/index")(app)
 require("./routes/auth")(app)
-require("./routes/notas")(app)
+require("./routes/asis")(app)
 
 //EXPORTANDO MODULO APP
 module.exports = app;
